@@ -12,6 +12,7 @@ key_file = os.getenv('key_file')
 scope_app = ['https://www.googleapis.com/auth/drive',
              'https://spreadsheets.google.com/feeds']
 
+
 def get_connect_sheet():
 
     cred = ServiceAccountCredentials.from_json_keyfile_name(
@@ -27,15 +28,6 @@ def push_to_sheets(sheet, df):
     sheet.clear()
     set_with_dataframe(worksheet=sheet, dataframe=df, include_index=False,
                        include_column_header=True, resize=True)
-
-
-# def append_to_sheets(df, sheet_name):
-#     """This function is used to append new values
-#     into the googgle sheets"""
-#     push_sheet =
-#     values = df.values.tolist()
-#     push_sheet.values_append(sheet_name, {'valueInputOption': 'USER_ENTERED'},
-#                              {'values': values})
 
 
 if __name__ == '__main__':
