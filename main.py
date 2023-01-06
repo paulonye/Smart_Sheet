@@ -34,6 +34,8 @@ def capture_data():
     price = []
     market_cap =[]
     
+    #using the html tags, we can identify where the data is located and then
+    #scrape that data
     for content in soup.findAll('td', attrs={'aria-label':"Symbol"}):
         name.append(content.text)
         
@@ -47,6 +49,9 @@ def capture_data():
     df = pd.DataFrame({'name':name, 'price':price, 'market_cap':market_cap})
     
     df['date'] = current_timestamp
+
+    #some basic data cleaning steps to ensure the data comes out in the right format
+    df['date'] = df['date'].astype('str')
     
     df['price'] = pd.to_numeric(df['price'])
     
