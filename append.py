@@ -1,9 +1,14 @@
-from main import capture_data
-from sheet_connect import get_connect_sheet
-import pandas as pd
-import send_mail
 import os
 
+try:
+    import send_mail
+    from main import capture_data
+    from sheet_connect import get_connect_sheet
+    import pandas as pd
+    import os
+except Exception as e:
+    send_mail.send_email(e)
+    os._exit(0)
 
 #This scrapes the data from Yahoo Finance
 try:
