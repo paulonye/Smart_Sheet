@@ -30,6 +30,17 @@ def push_to_sheets(sheet, df):
                        include_column_header=True, resize=True)
 
 
+def append_new_data(df, sheet_name, sheet):
+    """This function takes in the dataframe and the name of the sheet you wish
+    to append the data to """
+
+    values = df.values.tolist()
+    push_sheet = get_connect_sheet().open(sheet)
+    push_sheet.values_append(sheet_name, {'valueInputOption': 'USER_ENTERED'},
+                             {'values': values})
+
+
+
 if __name__ == '__main__':
     client = get_connect_sheet()
     sheet = client.open('test_sheet')
