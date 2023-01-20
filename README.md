@@ -7,8 +7,7 @@
 >
 >[Link to the Yahoo Finance Website](https://finance.yahoo.com/crypto/?.tsrc=fin-srch&offset=0&count=15)
 >
->[Link to the Final Dashboard](https://datastudio.google.com/reporting/9ce9b40b-7ae9-436c-929d-e2eb44efcc29) 
-
+>[Link to the Medium Article](https://medium.com/@nwosupaul141/building-an-etl-pipeline-using-google-service-accounts-85e2a6cfd94d) 
 
 ## Project Structure
 
@@ -20,6 +19,8 @@
 - Installing Required Libraries
 - Running the Python script
 - Running the Cronjob
+
+![Cover_Image](https://storage.googleapis.com/images-xlr1001/cover.png)
  
 ## Set up of Compute Engine Instance
 The project was built using a virtual machine, for set up; please refer to: 
