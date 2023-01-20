@@ -72,7 +72,7 @@ send_mail.py: This python script was set up for logging and error management.It 
 push.py: This python script was used to push the first batch of data from yahoo finance to google sheet. It is mainly used to test if the connection between python and the google sheet actually works.
 ```
 ```
-append.py: This is the python script that combines the functionality of all the other scripts. The other scripts are imported as modules, and their various functionalities are combined towards ensuring that the data is scraped, transformed, and transfered to google sheet.
+push_append.py: This is the python script that combines the functionality of all the other scripts. The other scripts are imported as modules, and their various functionalities are combined towards ensuring that the data is scraped, transformed, and transfered to google sheet.
 ```
 
 ## Installing Required Libraries
@@ -84,7 +84,7 @@ The requirements.txt file contains all the libraries that are used for the proje
 ## Running the Python script
 From your working directory; use the command below 
 ```bash
-   python3 append.py
+   python3 push_append.py
 ```
 ## Setting up the CronJob
 This is one of the major reasons, we are using a google cloud virtual image, we want to be able to run the pipeline every minute.
@@ -94,7 +94,7 @@ To set the cronjob, open the crontab using the command below:
 ```
 Scroll down and then input this command as seen below:
 ```bash
-   * * * * * export key_file=/home/macbook/.service_accounts_keys/name_of_service_account_key.json; /home/macbook/anaconda3/bin/python3 ~/Smart_Sheet/append.py
+   * * * * * export key_file=/home/macbook/.service_accounts_keys/name_of_service_account_key.json; /home/macbook/anaconda3/bin/python3 ~/Smart_Sheet/push_append.py
 ```
 The command above instructs our machine to run the append.py using the python from the anaconda installation directory. An environmental variable is also passed as this is a dependency for the python script to run successfully.
 
