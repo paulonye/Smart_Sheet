@@ -11,8 +11,8 @@ def send_email(error_msg):
 
     Allows personnel to catch the error and fix"""
 
-    EMAIL_ADDRESS = 'data@sendme.ng'
-    EMAIL_PASSWORD = 'chvkobzwldwfxhtk'
+    EMAIL_ADDRESS = '*********'
+    EMAIL_PASSWORD = '***********'
 
     # New Email Message
     msg = EmailMessage()
