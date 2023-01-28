@@ -14,7 +14,7 @@
 - Set up of Compute Engine Instance
 - Installation of Anaconda
 - Installation of Google Chrome and the Chrome Driver
-- Installation of Docker
+- Installation of D
 - Undestanding the Components of the Scripts
 - Installing Required Libraries
 - Running the Python script
