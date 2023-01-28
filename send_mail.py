@@ -11,14 +11,14 @@ def send_email(error_msg):
 
     Allows personnel to catch the error and fix"""
 
-    EMAIL_ADDRESS = 'use your email address'
-    EMAIL_PASSWORD = 'use the app password gmail generated for you'
+    EMAIL_ADDRESS = 'data@sendme.ng'
+    EMAIL_PASSWORD = 'chvkobzwldwfxhtk'
 
     # New Email Message
     msg = EmailMessage()
     msg['Subject'] = 'BROKEN PIPELINE'
     msg['From'] = EMAIL_ADDRESS
-    msg['To'] = ['the email addres(es) you need to send it to']
+    msg['To'] = ['paulnwosu@sendme.ng']
     msg.set_content(f'Logged Error:/n {error_msg}')
 
     # Send the message
