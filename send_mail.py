@@ -18,7 +18,7 @@ def send_email(error_msg):
     msg = EmailMessage()
     msg['Subject'] = 'BROKEN PIPELINE'
     msg['From'] = EMAIL_ADDRESS
-    msg['To'] = ['paulnwosu@sendme.ng']
+    msg['To'] = ['*************']
     msg.set_content(f'Logged Error:/n {error_msg}')
 
     # Send the message
