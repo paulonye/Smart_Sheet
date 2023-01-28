@@ -2,3 +2,6 @@
 build.ipynb
 __pycache__/
 key.json
+airflow_setup/key.json
+airflow_setup/logs/dag_processor_manager/
+airflow_setup/logs/scheduler/

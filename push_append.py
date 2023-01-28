@@ -26,7 +26,7 @@ try:
     #Once the connection has been made, the Google Sheet can now be accessed
     push_sheet = client.open('test_sheet')
     #opening the data sheet
-    data_push = push_sheet.worksheet('data2')
+    data_push = push_sheet.worksheet('data')
     data_push_df = pd.DataFrame.from_dict(data_push.get_all_records())
 except Exception as e:
     send_mail.send_email(e)
@@ -39,7 +39,7 @@ try:
     if len(data_push_df) == 0:
         push_to_sheets(data_push, data)
     else:
-        append_new_data(data,'data2','test_sheet')
+        append_new_data(data,'data','test_sheet')
 except Exception as e:
     print('Could not append')
     send_mail.send_email(e)

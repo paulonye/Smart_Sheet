@@ -1,0 +1,7 @@
+beautifulsoup4
+df2gspread
+gspread
+gspread_dataframe
+oauth2client
+requests
+selenium
