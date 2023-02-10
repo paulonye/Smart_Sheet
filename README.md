@@ -20,7 +20,7 @@
 - Running the Python script
 - Running the Cronjob
 
-![Cover_Image](https://storage.googleapis.com/images-xlr1001/cover.png)
+![Cover_Image](https://nwosupaulonye.s3.amazonaws.com/cover1.png)
  
 ## Set up of Compute Engine Instance
 The project was built using a virtual machine, for set up; please refer to: 
